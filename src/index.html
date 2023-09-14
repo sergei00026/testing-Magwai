@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Тестовая работа - Magwai"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__main main">
+					<div class="main__container">
+						<h1 class="main__title">Полет Илона Маска и DOGIE COIN</h1>
+						<p class="main__subTitle">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
+						<button data-popup="#popup" class="main__btn btn"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+					</div>
+					<div class="main__BoxImg">
+						<img class="main__bgImg" src="@img/mainBg.jpg" alt="space ilon mask">
+					</div>
+				</section>
+				<section class="page__cards cards">
+					<div class="cards__container">
+						<h2 class="title">Карточки</h2>
+						<div class="cards__body">
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
