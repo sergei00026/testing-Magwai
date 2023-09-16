@@ -258,18 +258,7 @@ body::after {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 40px;
-}
-
-@supports (padding-top: clamp( 16.625rem , 12.0375874126rem  +  22.9370629371vw , 37.125rem )) {
-  .main__container {
-    padding-top: clamp( 16.625rem , 12.0375874126rem  +  22.9370629371vw , 37.125rem );
-  }
-}
-
-@supports not (padding-top: clamp( 16.625rem , 12.0375874126rem  +  22.9370629371vw , 37.125rem )) {
-  .main__container {
-    padding-top: calc(16.625rem + 20.5 * (100vw - 20rem) / 89.375);
-  }
+  padding-top: 603px;
 }
 
 .main__container > :not(img) {
@@ -278,37 +267,33 @@ body::after {
 }
 
 .main__title {
+  font-size: 42px;
   font-weight: 700;
   text-transform: uppercase;
   opacity: 0.79;
-}
-
-@supports (font-size: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.625rem )) {
-  .main__title {
-    font-size: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.625rem );
-  }
-}
-
-@supports not (font-size: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.625rem )) {
-  .main__title {
-    font-size: calc(1.25rem + 1.375 * (100vw - 20rem) / 89.375);
-  }
+  line-height: 1.14;
 }
 
 .main__subTitle {
   line-height: 150%;
   /* 21px */
+  font-size: 16px;
 }
 
 .main__btn {
   margin-left: 15px;
+  min-width: 258.5px;
+}
+
+.main__btn.btn {
+  min-height: 47px;
 }
 
 .main__BoxImg {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -1px;
+  top: 50px;
   left: 0;
 }
 
@@ -338,19 +323,8 @@ body::after {
 }
 
 .cards {
+  padding-top: 237px;
   text-align: center;
-}
-
-@supports (padding-top: clamp( 6.25rem , 4.4318181818rem  +  9.0909090909vw , 14.375rem )) {
-  .cards {
-    padding-top: clamp( 6.25rem , 4.4318181818rem  +  9.0909090909vw , 14.375rem );
-  }
-}
-
-@supports not (padding-top: clamp( 6.25rem , 4.4318181818rem  +  9.0909090909vw , 14.375rem )) {
-  .cards {
-    padding-top: calc(6.25rem + 8.125 * (100vw - 20rem) / 89.375);
-  }
 }
 
 @supports (padding-bottom: clamp( 2.6875rem , -0.291520979rem  +  14.8951048951vw , 16rem )) {
@@ -378,29 +352,27 @@ body::after {
   padding-bottom: 60px;
 }
 
+.cards__btn {
+  min-width: 258.5px;
+}
+
 .title {
+  font-size: 42px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 53px;
-}
-
-@supports (font-size: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.625rem )) {
-  .title {
-    font-size: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.625rem );
-  }
-}
-
-@supports not (font-size: clamp( 1.25rem , 0.9423076923rem  +  1.5384615385vw , 2.625rem )) {
-  .title {
-    font-size: calc(1.25rem + 1.375 * (100vw - 20rem) / 89.375);
-  }
+  text-align: left;
 }
 
 .card {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 1fr;
-  grid-template-rows: auto 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .card__img {
@@ -410,7 +382,7 @@ body::after {
 }
 
 .card__body {
-  padding: 25px 23px 30px;
+  padding: 30px 23px;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +392,9 @@ body::after {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .card__title {
@@ -598,10 +573,14 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 12.5px;
+  gap: 30.5px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.buttons-contacts .btn {
+  width: 263.5px;
 }
 
 .phone {
@@ -616,12 +595,13 @@ body::after {
           align-items: center;
   border: 1px solid #fff;
   min-height: 60px;
-  padding: 5px 30px;
+  padding: 5px;
   -webkit-transform: skew(-20deg);
       -ms-transform: skew(-20deg);
           transform: skew(-20deg);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  width: 73.5px;
 }
 
 .phone svg {
@@ -659,7 +639,7 @@ body::after {
           align-items: center;
   background-color: #c2ab81;
   min-height: 60px;
-  padding: 5px 78px;
+  padding: 5px;
   -webkit-transform: skew(-20deg);
       -ms-transform: skew(-20deg);
           transform: skew(-20deg);
@@ -724,7 +704,7 @@ body::after {
 
 @media (min-width: 1550px) {
   .logo {
-    margin-right: 76px;
+    margin-right: 61px;
   }
 
   .buttons-contacts {
@@ -849,6 +829,50 @@ body::after {
   }
 }
 
+@media (max-width: 800px) {
+  [class*=__container] {
+    padding: 0 50px;
+  }
+
+  .main__container {
+    padding-top: 556px;
+  }
+
+  .main__container {
+    gap: 40px;
+  }
+
+  .main__title {
+    font-size: 38px;
+  }
+
+  .main__subTitle {
+    max-width: 423px;
+  }
+
+  .cards {
+    padding-top: 125px;
+  }
+
+  .title {
+    margin-bottom: 45px;
+  }
+
+  .menu > .buttons-contacts {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+
+  .menu > .buttons-contacts .btn {
+    max-width: 180px;
+  }
+
+  .buttons-contacts {
+    gap: 12.5px;
+  }
+}
+
 @media (max-width: 700px) {
   .menu__body {
     -webkit-box-orient: vertical;
@@ -907,8 +931,32 @@ body::after {
 }
 
 @media (max-width: 29.99875em) {
+  [class*=__container] {
+    padding: 0 0.9375rem;
+  }
+
+  .main__container {
+    padding-top: 267px;
+  }
+
   .main__container {
     gap: 20px;
+  }
+
+  .main__title {
+    font-size: 20px;
+  }
+
+  .main__subTitle {
+    font-size: 14px;
+  }
+
+  .main__btn {
+    min-width: 195px;
+  }
+
+  .cards {
+    padding-top: 105px;
   }
 
   .cards__body {
@@ -917,6 +965,7 @@ body::after {
 
   .title {
     margin-bottom: 30px;
+    font-size: 20px;
   }
 
   .logo {
