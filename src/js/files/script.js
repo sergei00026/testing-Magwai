@@ -7,8 +7,8 @@ import { flsModules } from "./modules.js";
 const cards = document.querySelector(".cards__body");
 
 const showMoreButton = document.createElement("button");
-showMoreButton.textContent = "Показать еще";
-showMoreButton.classList.add("btn");
+showMoreButton.insertAdjacentHTML("afterbegin", `<span>Загрузть еще</span>`);
+showMoreButton.classList.add("btn", "cards__btn");
 
 cards.after(showMoreButton);
 

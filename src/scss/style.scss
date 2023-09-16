@@ -109,6 +109,12 @@ body {
 		}
 		@if ($containerPadding>0) {
 			padding: 0 rem(math.div($containerPadding, 2));
+			@media (max-width: 800px) {
+				padding: 0 50px;
+			}
+			@media (max-width: $mobileSmall) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
 		}
 	}
 } @else {

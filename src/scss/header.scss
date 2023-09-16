@@ -18,7 +18,7 @@
 		max-width: 100%;
 	}
 	@media (min-width: 1550px) {
-		margin-right: 76px;
+		margin-right: 61px;
 	}
 	@media (max-width: $mobileSmall) {
 		flex: 0 0 112.5px;
@@ -34,6 +34,12 @@
 	& > .buttons-contacts {
 		position: relative;
 		z-index: 4;
+		@media (max-width: 800px) {
+			justify-content: normal;
+			.btn {
+				max-width: 180px;
+			}
+		}
 	}
 	@media (max-width: 1550px) {
 		justify-content: space-between;
@@ -148,11 +154,17 @@
 .buttons-contacts {
 	display: flex;
 	align-items: center;
-	gap: 12.5px;
+	gap: 30.5px;
 	justify-content: flex-end;
+	.btn {
+		width: 263.5px;
+	}
 	@media (min-width: 1550px) {
 		flex: 1 1 auto;
 		margin-left: auto;
+	}
+	@media (max-width: 800px) {
+		gap: 12.5px;
 	}
 	@media (max-width: 700px) {
 		display: none;
@@ -164,9 +176,10 @@
 	align-items: center;
 	border: 1px solid $mainColor;
 	min-height: 60px;
-	padding: 5px 30px;
+	padding: 5px;
 	transform: skew(-20deg);
 	transition: all 0.3s ease 0s;
+	width: 73.5px;
 	svg {
 		transition: all 0.3s ease 0s;
 		transform: skew(20deg);
@@ -189,7 +202,7 @@
 	align-items: center;
 	background-color: $orange;
 	min-height: 60px;
-	padding: 5px 78px;
+	padding: 5px;
 	transform: skew(-20deg);
 	position: relative;
 	margin-right: 21px;
